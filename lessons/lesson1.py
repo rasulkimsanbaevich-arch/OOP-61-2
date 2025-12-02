@@ -7,6 +7,7 @@ class Hero:
         self.hp = hp
 
 
+
     def base_action(self):
         return f"base action {self.name}"
 
@@ -18,5 +19,5 @@ just_text = str("just text")
 print(kirito.name)
 print(asuna.hp)
 print(kirito.base_action())
-1:30
+
 
