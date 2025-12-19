@@ -1,3 +1,8 @@
+from lessons.lesson2 import MageHero
+import random
+class Test:
+
+    pass
 class Hero:
     # конструктор класса
     def __init__(self, name, lvl, hp):
@@ -11,13 +16,7 @@ class Hero:
     def base_action(self):
         return f"base action {self.name}"
 
-# экземпляр класса
-kirito = Hero("Kirito", 100, 1000)
-asuna = Hero("Asuna", 100, 100)
-
-just_text = str("just text")
-# print(kirito.name)
-# print(asuna.hp)
-# print(kirito.base_action())
-
-
+__all__ =  (
+    "Hero",
+    "Test"
+)
