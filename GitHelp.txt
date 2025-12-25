@@ -1,15 +1,63 @@
-1) команды для регистрации ваших данных
-git config --global user.name "your_username"
-git config --global user.email "your_gmail.com"
+Команды для регистрации ваших данных
+пишутся один на ПК
+git config --global user.name "arzy-54-2"
+git config --global user.email "some_emal@gmail.com"
+============================================================
+Пишутся один раз на проект
+git init
+git remote add origin https://github.com/arzy-54-2/oop-61-2.git
+===============================================================
 
-2) Команды только для одного проекта
 
-3) git  init | инициализация
-4) git remote add origin link_to_repository | Добавления репозитория
 
-5) git status | статус репозитори
 
-6) git add . | Добавления всех файлов в буфер обмена
-7) git commit -m "message" | сохранение всего из буфера обмена
 
-8) git push origin master | Отправка изменений
+
+git status
+нужно создать файл .gitignore
+git add .
+git add путь\название файла или директории
+git commit -m "same text"
+git push origin master
+git rm -r название файла или директории
+
+git branch    посмотерть ветки
+git branch название_ветки
+
+git merge название ветки
+
+git switch название ветки        для переключение на ветку
+git checkout название ветки
+
+git checkout -b название ветки
+git switch -c название ветки    для создания ветки и переключения на нее
+
+prod
+
+reseal
+
+python
+py                -m venv name_venv
+python3
+
+
+.venv\Scripts\activate        - Для Винды
+source .venv/bin/activate     - Для мака или линукс
+
+test
+stage|dev|test
+dev
+
+feat/login
+feat/register
+feat/comment
+
+
+git commit -m "feat: fjdnfhaudhcuah"
+git commit -m "update: fbvgaedjckanlsjkdx"
+git commit -m "fix: hdfejwdbhjwe"
+git commit -m "hotfix: "
+
+git restore путь         откат изменений
+git reset пть            удаление после git add
+git reset --mixed HEAD~1   удаление последнего коммита
