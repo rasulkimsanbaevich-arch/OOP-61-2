@@ -39,7 +39,7 @@ def create_order(user_id, product_name, total):
 # create_user("Arzybek")
 # create_user("Oleg")
 # create_user("Slava")
-# create_order(1, "Iphone17pro-max", 1200)
+# create_order(3, "Iphone17pro-max", 1200)
 # create_order(2, "MI 17", 800)
 # create_order(5, "Google Phone 10pro", 1000)
 
@@ -72,7 +72,38 @@ def get_user_order():
     GROUP BY user_id''')
     users = cursor.fetchall()
     print(users)
-get_user_order()
-52
+# get_user_order()
 
 
+
+def iphone_user():
+    cursor.execute('''
+        SELECT name 
+        FROM users
+        WHERE id IN (
+                SELECT user_id FROM orders
+                WHERE product = 'Iphone17pro-max'
+                )''')
+    users = cursor.fetchall()
+    print(users)
+# iphone_user()
+
+def create_my_view():
+    cursor.execute('''
+        CREATE VIEW IF NOT EXISTS my_view AS
+        SELECT 
+            users.name,
+            orders.product,
+            orders.total
+        FROM users
+        LEFT JOIN orders ON users.id = orders.user_id''')
+    connect.commit()
+
+# create_my_view()
+
+def get_user_order_join():
+    cursor.execute('SELECT * FROM my_view')
+    users = cursor.fetchall()
+    print(users)
+
+# get_user_order_join()
